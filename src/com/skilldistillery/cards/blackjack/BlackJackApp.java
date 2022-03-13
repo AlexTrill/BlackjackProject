@@ -72,7 +72,7 @@ public class BlackJackApp {
 
 		if (player.getHand().isBLackJack() && dealer.getHand().isBLackJack()) {
 			System.out.println("Push, no one wins this hand");
-
+			playAgain();
 		} else if (player.getHand().isBLackJack()) {
 			System.out.println("You got Blackjack! You win the hand");
 			playAgain();
@@ -145,7 +145,7 @@ public class BlackJackApp {
 	}
 
 	public void playAgain() {
-		System.out.println("Would you like to play again? (Y/N)");
+		System.out.println("\n Would you like to play again? (Y/N)");
 		switch (kb.next()) {
 		case "Y":
 		case "y":
@@ -164,11 +164,14 @@ public class BlackJackApp {
 
 	public void calculateWinner() {
 		if (dealer.getHand().getHandValue() > player.getHand().getHandValue()) {
+			System.out.println("Your total hand " + player.getHand() + "  " + player.getHand().getHandValue());
+
 			System.out.println();
 			System.out.println("THE DEALER WON THE HAND! You should probably have another drink...");
 		} else if (dealer.getHand().getHandValue() < player.getHand().getHandValue()) {
 			System.out.println("CONGRATS, YOU WIN THE HAND!");
-		}
+		} else if ((dealer.getHand().getHandValue() == player.getHand().getHandValue()))
+			System.out.println("Push, no one wins this time");
 		System.out.println("-----------------------");
 		playAgain();
 	}
