@@ -5,10 +5,10 @@ import java.util.Scanner;
 import com.skilldistillery.cards.common.Deck;
 
 public class BlackJackApp {
-	private char a ='\u2660';  
+	private char a = '\u2660';
 	private char b = '\u2662';
 	private char c = '\u2665';
-	private char d = '\u2667'; 
+	private char d = '\u2667';
 
 	Dealer dealer = new Dealer();
 	Player player = new Player();
@@ -20,15 +20,6 @@ public class BlackJackApp {
 
 		BlackJackApp BJA = new BlackJackApp();
 		BJA.run();
-
-		/*-
-		 * Dealer deals 2 cards to player and dealers blackjack hand
-		 * display value of cards + value of just one of dealers card (top facing card). 
-		 * determine if value is = blackjack
-		 * give the player the option to hit or stand
-		 * determine value each time a new card is added to hand 
-		 * calculate and  display winner
-		 */
 
 	}
 

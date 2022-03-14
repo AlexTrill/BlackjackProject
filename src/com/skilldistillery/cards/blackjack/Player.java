@@ -12,5 +12,5 @@ public class Player {
 	public void setHand(BlackJackHand hand) {
 		this.hand = hand;
 	}
-	
+
 }
